@@ -1,0 +1,36 @@
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+nav.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: slide-down 1s forwards;
+    z-index: 100;
+}
+@keyframes slide-down {
+    0%{
+        transform: translateY(-100px);
+    }
+    
+}
+
+.active{
+    color: rgb(253, 72, 72);
+}
+
+i{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.fa-copyright{
+    padding-left: 10px;
+    padding-right: 0;
+}
+@media screen and (min-width:640px){
+    .input{
+        width: 32rem;
+    }
+}
