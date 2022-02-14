@@ -30,8 +30,8 @@
         <div class='absolute rounded-full w-5 h-5 bg-amber-300 top-40 left-96 opacity-20 animate-ping'></div>
         <h2>Hello, I'm <span class=' text-rose-500'>Win Aung</span>.</h2>
         <h2>I'm a front-end Developer.</h2>
-        <div class='group'>
-          <a href="#project"><button class=' border-2 mt-10 py-2 px-2 text-xl hover:animate-pulse hover:bg-rose-500 hover:border-none '>View my work<i class="fas fa-arrow-right text-lg ml-3.5 group-hover:rotate-90"></i></button></a>
+        <div class='group w-60 ml-auto mr-auto'>
+          <a href="#project"><button class=' border-2 mt-10 py-2 flex px-4 text-lg hover:animate-pulse hover:bg-rose-500 hover:border-none'>View my work<i class="fas fa-arrow-right pt-1 text-md ml-3.5 group-hover:rotate-90"></i></button></a>
         </div>
         
       </div>
@@ -41,14 +41,14 @@
 
     <!-- navbar section starts-->
     <div class="text-xl">
-        <nav id="navbar" class='border-b-rose-500 border-b-8 px-96 bg-slate-900 inset-x-0 py-3 text-white flex justify-around '>
+        <nav id="navbar" class='border-b-rose-500 border-b-8 sm:px-96 bg-slate-900 inset-x-0 py-3 text-white sm:flex sm:justify-around'>
             <ul id="menu" class='hidden sm:flex gap-x-6 px-96'>
               <li class='hover:animate-bounce hover:text-rose-500'><a href="#" class="home">HOME</a></li>
               <li class='hover:animate-bounce hover:text-rose-500'><a href="#about" class="about">ABOUT</a></li>
               <li class='hover:animate-bounce hover:text-rose-500'><a href="#project" class="project">PROJECTS</a></li>
               <li class='hover:animate-bounce hover:text-rose-500'><a href="#contact" class="contact">CONTACT</a></li>
             </ul>
-            <i id="bars" class="fas fa-bars cursor-pointer sm:hidden ml-20 mr-20 text-2xl"></i>
+            <i id="bars" class="fas fa-bars cursor-pointer sm:hidden  text-2xl"></i>
             <!-- <i id="x" class="hidden fas cursor-pointer fa-times sm:hidden ml-20 mr-20 text-2xl"></i> -->
         </nav>
     </div>
@@ -86,7 +86,7 @@
     </div>
     
     <div class='sm:flex sm:pt-20 justify-center'>
-      <div class='text-3xl px-7 flex sm:text-6xl' data-aos="fade-up">
+      <div class='text-3xl sm:flex sm:px-7 sm:text-6xl' data-aos="fade-up">
         <i class="fab fa-react icon text-sky-400 animate-spin"></i>
         <h1 class='px-5 text-2xl sm:text-3xl'>React</h1>
         <i class="fab fa-html5 text-orange-600"></i>
@@ -138,7 +138,7 @@
     
     
     <!-- contact starts here  -->
-    <div id="contact" class='bg-gray-800 min-h-screen'>
+    <div id="contact" class='bg-gray-800 min-h-screen pb-40'>
         <h1 class='text-center text-4xl pt-20 mb-20 border-b-4 w-40 pb-3 border-white ml-auto mr-auto text-white' data-aos="fade-down">CONTACT</h1>
         <p class='text-center text-rose-500 text-xl pb-7' data-aos="fade-left">Ready to work with me?</p>
         <div class='text-center text-white ' data-aos="zoom-in">
@@ -169,7 +169,13 @@
       
       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
       <script>
-        AOS.init();
+        AOS.init({
+
+          disable: function() {
+         var maxWidth = 800;
+        return window.innerWidth < maxWidth;
+          }
+        });
         </script>
     <script src="/js/main.js"></script>
     <script src="js/app.js"></script>
